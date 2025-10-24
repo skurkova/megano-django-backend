@@ -20,8 +20,7 @@ def validate_image_size(image):
 
 class User(AbstractUser):
     """Кастомная модель пользователя с расширенными полями"""
-    fullName = models.CharField(max_length=300, blank=False)
-    email = models.EmailField(blank=True, null=True)
+    fullName = models.CharField(max_length=300, blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
     avatar = models.ImageField(
         blank=True,
