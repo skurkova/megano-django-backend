@@ -22,7 +22,7 @@ class SignUpView(APIView):
 
         serializer = SignUpSerializer(data=data)
         if not serializer.is_valid():
-            return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         user = serializer.save()
         login(request, user)
@@ -38,7 +38,7 @@ class SignInView(APIView):
 
         serializer = SignInSerializer(data=data)
         if not serializer.is_valid():
-            return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         username = serializer.validated_data['username']
         password = serializer.validated_data['password']
