@@ -28,3 +28,4 @@ class User(AbstractUser):
         upload_to=avatar_directory_path,
         validators=[validate_image_size],
     )
+    is_deleted = models.BooleanField(default=False, db_index=True)
