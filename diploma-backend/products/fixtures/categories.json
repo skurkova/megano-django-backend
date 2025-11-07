@@ -1,0 +1,162 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "title": "Accessories",
+    "image": "products/category_1/images/Accessories.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "title": "Bags",
+    "image": "products/category_2/images/Bags.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "title": "Cameras",
+    "image": "products/category_3/images/Cameras.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "title": "Clothings",
+    "image": "products/category_4/images/Clothings.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "title": "Electronics",
+    "image": "products/category_5/images/Electronics.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "title": "Fashion",
+    "image": "products/category_6/images/Fashion.png",
+    "parent": null,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "title": "Smartphones",
+    "image": "",
+    "parent": 5,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "title": "Laptops",
+    "image": "",
+    "parent": 5,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 9,
+  "fields": {
+    "title": "Headphones",
+    "image": "",
+    "parent": 1,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 10,
+  "fields": {
+    "title": "Backpacks",
+    "image": "",
+    "parent": 2,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 11,
+  "fields": {
+    "title": "Shoes",
+    "image": "",
+    "parent": 4,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 12,
+  "fields": {
+    "title": "Sneakers",
+    "image": "",
+    "parent": 11,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 13,
+  "fields": {
+    "title": "Dresses",
+    "image": "",
+    "parent": 4,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 14,
+  "fields": {
+    "title": "Women",
+    "image": "",
+    "parent": 4,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 15,
+  "fields": {
+    "title": "Men",
+    "image": "",
+    "parent": 4,
+    "is_deleted": false
+  }
+},
+{
+  "model": "products.category",
+  "pk": 16,
+  "fields": {
+    "title": "Accessories",
+    "image": "",
+    "parent": 6,
+    "is_deleted": false
+  }
+}
+]

@@ -1,0 +1,164 @@
+[
+{
+  "model": "products.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "src": "products/product_1/images/iphone-16-pro-max-black-titanium.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 4,
+    "src": "products/product_4/images/Sony_Alpha_7_IV_1.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 4,
+    "src": "products/product_4/images/Sony_Alpha_7_IV_2.jpg",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 4,
+  "fields": {
+    "product": 5,
+    "src": "products/product_5/images/Dress_red.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 5,
+  "fields": {
+    "product": 10,
+    "src": "products/product_10/images/Laptop_backpack_15.622_1.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 10,
+    "src": "products/product_10/images/Laptop_backpack_15.622_2.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 11,
+    "src": "products/product_11/images/Travel_bag-trolley.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 2,
+    "src": "products/product_2/images/Nike_Air_Max_90.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 3,
+    "src": "products/product_3/images/Headphones_JBL_Tune_T720BT_.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 6,
+    "src": "products/product_6/images/Midi_dress_with_floral_print_Ns1OXVr.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 7,
+    "src": "products/product_7/images/Mens_oversize_shirt.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 8,
+    "src": "products/product_8/images/Oversize_plaid_coat_YM2BLtc.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 9,
+    "src": "products/product_9/images/Sunglasses.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 12,
+    "src": "products/product_12/images/Power_Bank_20000_mAh.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 13,
+    "src": "products/product_13/images/Smart_watch_with_ECG.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 14,
+    "src": "products/product_14/images/Case_for_AirPods_with_carabiner.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 15,
+    "src": "products/product_15/images/USB-C_cable_2_m_braided.png",
+    "alt": ""
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 16,
+    "src": "products/product_16/images/Mouse_pad_XXL.png",
+    "alt": ""
+  }
+}
+]
