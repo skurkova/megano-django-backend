@@ -50,7 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontend',
     'accounts',
+    'products',
     'rest_framework',                     # Подключение Django REST Framework
+    'rest_framework_simplejwt',           # Поддержка JWT-аутентификации
     'drf_spectacular',                    # Генератор документации OpenAPI
     'django_filters',                     # Фильтр данных
 ]
@@ -144,15 +146,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Настройки для Django REST Framework
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',      # пагинация по номерам страниц
-    'PAGE_SIZE': 10,  # 10 объектов на странице
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],  # фильтрация данных прямо в URL
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',                      # генерация OpenAPI (Swagger)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',   # JWT аутентификация
+        'rest_framework.authentication.SessionAuthentication',         # Сессионная аутентификация для браузера
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',        # Разрешения по умолчанию
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',           # Фильтрация
+        'rest_framework.filters.SearchFilter',                         # Поиск
+        'rest_framework.filters.OrderingFilter',                       # Сортировка
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',      # генерация OpenAPI (Swagger)
 }
 
 # Настройки для drf-spectacular
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'API for online store Megano',        # Название API
+    'TITLE': 'API for online store Megano',                # Название API
     'DESCRIPTION': 'Site online store Megano',
     'VERSION': '1.0.0',                                    # Версия API
     'SERVE_INCLUDE_SCHEMA': False,                         # Отключение схемы
