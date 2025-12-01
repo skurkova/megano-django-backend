@@ -37,8 +37,6 @@ class SignUpView(APIView):
             order = get_object_or_404(Order, id=order_id)
             order.user = user
             order.fullName = user.fullName or user.first_name + user.last_name or user.username.title()
-            order.email = user.email
-            order.phone = user.phone
             order.save()
             del request.session['orderId']
 
@@ -73,8 +71,6 @@ class SignInView(APIView):
             order = get_object_or_404(Order, id=order_id)
             order.user = user
             order.fullName = user.fullName or user.first_name + user.last_name or user.username.title()
-            order.email = user.email
-            order.phone = user.phone
             order.save()
             del request.session['orderId']
 
