@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import BasketItem, Order, OrderProduct, Payment
+from .models import BasketItem, Order, OrderProduct, Payment, DeliveryType
 
 from products.serializers import ImageSerializer, TagSerializer, ProductShortSerializer
 
@@ -59,7 +59,6 @@ class BasketItemResponseSerializer(serializers.ModelSerializer):
     """
     id = serializers.IntegerField(source='product.id')
     category = serializers.IntegerField(source='product.category_id')
-    # price = serializers.SerializerMethodField()
     price = serializers.DecimalField(source='product.price', max_digits=10, decimal_places=2)
     count = serializers.IntegerField(source='quantity')
     date = serializers.DateTimeField(source='product.date')
@@ -87,9 +86,6 @@ class BasketItemResponseSerializer(serializers.ModelSerializer):
             'reviews',
             'rating'
         )
-
-    # def get_price(self, obj):
-    #     return float(obj.product.price * obj.quantity)
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -129,7 +125,7 @@ class PaymentSerializer(serializers.ModelSerializer):
         )
 
     def validate_number(self, value):
-        """Проверка валидности номера"""
+        """Проверка валидности номера карты"""
         if not value.isdigit():
             raise serializers.ValidationError('The number must contain only numbers')
         if len(str(value)) > 8:
@@ -141,6 +137,7 @@ class PaymentSerializer(serializers.ModelSerializer):
         return value
 
     def validate_month(self, value):
+        """Проверка валидности цифр, обозначающих месяц"""
         if not value.isdigit():
             raise serializers.ValidationError('The month must contain only numbers')
         if len(str(value)) != 2:
@@ -150,6 +147,7 @@ class PaymentSerializer(serializers.ModelSerializer):
         return value
 
     def validate_year(self, value):
+        """Проверка валидности цифр, обозначающих год"""
         if not value.isdigit():
             raise serializers.ValidationError('The year must contain only numbers')
         if len(str(value)) != 4:
@@ -157,6 +155,7 @@ class PaymentSerializer(serializers.ModelSerializer):
         return value
 
     def validate_code(self, value):
+        """Проверка валидности трехзначного кода"""
         if not value.isdigit():
             raise serializers.ValidationError('The code must contain only numbers')
         if len(str(value)) != 3:

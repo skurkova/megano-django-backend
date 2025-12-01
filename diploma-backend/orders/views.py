@@ -13,7 +13,6 @@ from .serializers import OrderSerializer, PaymentSerializer, BasketItemResponseS
 
 from products.models import Product
 from products.serializers import ProductShortSerializer
-from accounts.views import SignUpView, SignInView
 
 
 class BasketAPIView(APIView):
@@ -174,8 +173,8 @@ class OrdersAPIView(APIView):
             order = Order.objects.create(
                 user=request.user,
                 fullName=request.user.fullName or request.user.first_name + request.user.last_name or request.user.username.title(),
-                email=request.user.email,
-                phone=request.user.phone,
+                email=request.user.email or '',
+                phone=request.user.phone or '',
             )
 
             # Получаем корзину из БД
