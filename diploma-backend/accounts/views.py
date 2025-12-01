@@ -40,7 +40,7 @@ class SignUpView(APIView):
             order.save()
             del request.session['orderId']
 
-        return Response({'message': 'User successfully registered.'}, status=status.HTTP_200_OK)
+        return Response({'message': 'Successfully signed in'}, status=status.HTTP_200_OK)
 
 
 class SignInView(APIView):
