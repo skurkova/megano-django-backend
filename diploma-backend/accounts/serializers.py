@@ -8,16 +8,19 @@ from .models import User
 
 
 class SignUpSerializer(serializers.Serializer):
+    """Сериализатор регистрации пользователя"""
     name = serializers.CharField(max_length=300, required=True)
     username = serializers.CharField(max_length=150, required=True)
     password = serializers.CharField(write_only=True, required=True)
 
     def validate_username(self, value):
+        """Проверяем уникальность username"""
         if User.objects.filter(username=value).exists():
             raise serializers.ValidationError('User with login already exists')
         return value
 
     def validate_password(self, value):
+        """Проверяем валидность пароля"""
         try:
             validate_password(value)
         except ValidationError as exp:
@@ -25,6 +28,7 @@ class SignUpSerializer(serializers.Serializer):
         return value
 
     def create(self, validated_data):
+        """Создаем пользователя"""
         user = User.objects.create_user(
             username=validated_data['username'],
             fullName=validated_data['name'],
@@ -34,11 +38,13 @@ class SignUpSerializer(serializers.Serializer):
 
 
 class SignInSerializer(serializers.Serializer):
+    """Сериализатор авторизации пользователя"""
     username = serializers.CharField(required=True)
     password = serializers.CharField(required=True)
 
 
 class UserSerializer(serializers.ModelSerializer):
+    """Сериализатор пользователя"""
 
     class Meta:
         model = User
@@ -49,7 +55,7 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
     def validate_email(self, value):
-        """Проверка валидности и уникальности email"""
+        """Проверяем валидность и уникальность email"""
         try:
             validate_email(value)
         except ValidationError as exp:
@@ -60,7 +66,7 @@ class UserSerializer(serializers.ModelSerializer):
         return value
 
     def validate_phone(self, value):
-        """Проверка валидности и уникальности phone"""
+        """Проверяем валидность и уникальность phone"""
         if value:
             check_value = value[1:] if value.startswith('+') else value
             if not check_value.isdigit():
@@ -79,16 +85,19 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ChangePasswordSerializer(serializers.Serializer):
+    """Сериализатор изменения пароля пользователя"""
     currentPassword = serializers.CharField(required=True, write_only=True)
     newPassword = serializers.CharField(required=True, write_only=True)
 
     def validate_currentPassword(self, value):
+        """Проверяем текущий пароль"""
         user = self.instance
         if not user.check_password(value):
             raise serializers.ValidationError('Current password is entered incorrectly')
         return value
 
     def validate_newPassword(self, value):
+        """Проверяем совпадение нового пароля с текущим и его валидность"""
         user = self.instance
         if user.check_password(value):
             raise serializers.ValidationError('New password cannot match current password.')
