@@ -39,6 +39,10 @@ class SignUpView(APIView):
             order.fullName = user.fullName or user.first_name + user.last_name or user.username.title()
             order.save()
             del request.session['orderId']
+            return Response({
+                'message': 'Successfully signed in',
+                'orderId': order.id
+            }, status=status.HTTP_200_OK)
 
         return Response({'message': 'Successfully signed in'}, status=status.HTTP_200_OK)
 
