@@ -14,9 +14,18 @@ class TagSerializer(serializers.ModelSerializer):
         )
 
 
+class ImageSerializer(serializers.ModelSerializer):
+    """Сериализатор картинок"""
+
+    class Meta:
+        model = ProductImage
+        fields = ('src', 'alt')
+
+
 class CategorySerializer(serializers.ModelSerializer):
     """Сериализатор категорий"""
     subcategories = serializers.SerializerMethodField()
+    image = serializers.SerializerMethodField()
 
     class Meta:
         model = Category
@@ -33,13 +42,10 @@ class CategorySerializer(serializers.ModelSerializer):
         subcategories = obj.subcategories.filter(is_deleted=False)
         return CategorySerializer(subcategories, many=True, context=self.context).data
 
-
-class ImageSerializer(serializers.ModelSerializer):
-    """Сериализатор картинок"""
-
-    class Meta:
-        model = ProductImage
-        fields = ('src', 'alt')
+    def get_image(self, obj):
+        return {
+            "src": obj.image.url,
+            "alt": obj.title}
 
 
 class ReviewSerializer(serializers.ModelSerializer):
