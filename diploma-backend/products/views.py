@@ -39,7 +39,7 @@ class ProductsPopularListAPIView(ListAPIView):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
                                                   reviews_count=Count('reviews')).order_by(
-            '-rating', '-reviews_count').distinct()[:4]
+            '-rating', '-reviews_count').distinct()[:8]
 
 
 class ProductsLimitedListAPIView(ListAPIView):
@@ -53,7 +53,7 @@ class ProductsLimitedListAPIView(ListAPIView):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
                                                   reviews_count=Count('reviews')).filter(
-            count__lte=LIMITED_COUNT_THRESHOLD, count__gt=0).distinct()[:4]
+            count__lte=LIMITED_COUNT_THRESHOLD, count__gt=0).distinct()[:16]
 
 
 class ProductBannersListAPIView(ListAPIView):
@@ -63,7 +63,7 @@ class ProductBannersListAPIView(ListAPIView):
     def get_queryset(self):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
-                                                  reviews_count=Count('reviews')).distinct()[:4]
+                                                  reviews_count=Count('reviews')).distinct()[:3]
 
 
 class SaleListAPIView(ListAPIView):
