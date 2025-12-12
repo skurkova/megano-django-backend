@@ -8,9 +8,12 @@ from rest_framework import status
 
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.core.exceptions import ValidationError
+from django.shortcuts import get_object_or_404
 
 from .models import validate_image_size
 from .serializers import UserSerializer, SignUpSerializer, SignInSerializer, ChangePasswordSerializer
+
+from orders.models import Order
 
 
 class SignUpView(APIView):
@@ -23,10 +26,24 @@ class SignUpView(APIView):
         serializer = SignUpSerializer(data=data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
         user = serializer.save()
+
+        # Логинимся
         login(request, user)
-        return Response({'message': 'User successfully registered.'}, status=status.HTTP_200_OK)
+
+        # Привязываем пользователя к заказу, если он есть в сессии
+        order_id = request.session.get('orderId')
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+            order.user = user
+            order.fullName = user.fullName or user.first_name + user.last_name or user.username.title()
+            order.save()
+            del request.session['orderId']
+            return Response({
+                'orderId': order.id
+            }, status=status.HTTP_200_OK)
+
+        return Response({'message': 'Successfully signed in'}, status=status.HTTP_200_OK)
 
 
 class SignInView(APIView):
@@ -43,11 +60,23 @@ class SignInView(APIView):
         username = serializer.validated_data['username']
         password = serializer.validated_data['password']
 
+        # Проверяем, существует ли пользователь с таким username и password
         user = authenticate(request, username=username, password=password)
         if user is None:
             return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
+        # Логинимся
         login(request, user)
+
+        # Привязываем пользователя к заказу, если он есть в сессии
+        order_id = request.session.get('orderId')
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+            order.user = user
+            order.fullName = user.fullName or user.first_name + user.last_name or user.username.title()
+            order.save()
+            del request.session['orderId']
+
         return Response({'message': 'Successfully signed in'}, status=status.HTTP_200_OK)
 
 

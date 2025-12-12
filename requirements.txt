@@ -15,3 +15,4 @@ flake8-docstrings==1.7.0
 django-debug-toolbar==6.0.0
 sentry-sdk==2.41.0
 poetry==2.2.1
+django-cleanup==9.0.0

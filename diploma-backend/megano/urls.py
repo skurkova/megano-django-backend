@@ -28,6 +28,7 @@ urlpatterns = [
     # API приложений (backend)
     path('api/', include('accounts.urls')),
     path('api/', include('products.urls')),
+    path('api/', include('orders.urls')),
 
     # Документация API (OpenAPI)
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

@@ -48,13 +48,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Frontend
     'frontend',
-    'accounts',
-    'products',
+
+    # Backend
+    'accounts',                           # Приложение для работы с пользователями (профиль, регистрация/авторизация)
+    'products',                           # Приложение для работы с товарами (каталог, категории, теги, отзывы)
+    'orders',                             # Приложение для работы с заказами (корзина, оплата)
+
     'rest_framework',                     # Подключение Django REST Framework
     'rest_framework_simplejwt',           # Поддержка JWT-аутентификации
     'drf_spectacular',                    # Генератор документации OpenAPI
     'django_filters',                     # Фильтр данных
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
@@ -149,9 +156,6 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',   # JWT аутентификация
         'rest_framework.authentication.SessionAuthentication',         # Сессионная аутентификация для браузера
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',        # Разрешения по умолчанию
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',           # Фильтрация
