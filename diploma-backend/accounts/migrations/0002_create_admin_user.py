@@ -11,7 +11,8 @@ def create_admin_user(apps, schema_editor):
         User.objects.create_superuser(
             username='admin',
             email='admin@example.com',
-            password='admin'
+            password='admin',
+            phone='+79999999999'
         )
     else:
         # Восстанавливаем, если был удалён
