@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',           # Поддержка JWT-аутентификации
     'drf_spectacular',                    # Генератор документации OpenAPI
     'django_filters',                     # Фильтр данных
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
