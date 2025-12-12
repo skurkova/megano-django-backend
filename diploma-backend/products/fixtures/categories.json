@@ -64,7 +64,7 @@
   "pk": 7,
   "fields": {
     "title": "Smartphones",
-    "image": "",
+    "image": "products/category_7/images/Smartphones.png",
     "parent": 5,
     "is_deleted": false
   }
@@ -74,7 +74,7 @@
   "pk": 8,
   "fields": {
     "title": "Laptops",
-    "image": "",
+    "image": "products/category_8/images/Laptops.png",
     "parent": 5,
     "is_deleted": false
   }
@@ -84,7 +84,7 @@
   "pk": 9,
   "fields": {
     "title": "Headphones",
-    "image": "",
+    "image": "products/category_9/images/Headphones.png",
     "parent": 1,
     "is_deleted": false
   }
@@ -94,7 +94,7 @@
   "pk": 10,
   "fields": {
     "title": "Backpacks",
-    "image": "",
+    "image": "products/category_10/images/Backpacks.png",
     "parent": 2,
     "is_deleted": false
   }
@@ -104,7 +104,7 @@
   "pk": 11,
   "fields": {
     "title": "Shoes",
-    "image": "",
+    "image": "products/category_11/images/Shoes.png",
     "parent": 4,
     "is_deleted": false
   }
@@ -114,7 +114,7 @@
   "pk": 12,
   "fields": {
     "title": "Sneakers",
-    "image": "",
+    "image": "products/category_12/images/Sneakers.png",
     "parent": 11,
     "is_deleted": false
   }
@@ -124,7 +124,7 @@
   "pk": 13,
   "fields": {
     "title": "Dresses",
-    "image": "",
+    "image": "products/category_13/images/Dresses.png",
     "parent": 4,
     "is_deleted": false
   }
@@ -134,7 +134,7 @@
   "pk": 14,
   "fields": {
     "title": "Women",
-    "image": "",
+    "image": "products/category_14/images/Women.png",
     "parent": 4,
     "is_deleted": false
   }
@@ -144,7 +144,7 @@
   "pk": 15,
   "fields": {
     "title": "Men",
-    "image": "",
+    "image": "products/category_15/images/Men.png",
     "parent": 4,
     "is_deleted": false
   }
@@ -154,7 +154,7 @@
   "pk": 16,
   "fields": {
     "title": "Accessories",
-    "image": "",
+    "image": "products/category_16/images/Accessories_Fashion.png",
     "parent": 6,
     "is_deleted": false
   }

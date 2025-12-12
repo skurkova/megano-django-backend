@@ -1,4 +1,5 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
+from rest_framework.permissions import IsAuthenticated
 
 from django.db.models import Avg, Value, Count
 from django.db.models.functions import Coalesce
@@ -38,7 +39,7 @@ class ProductsPopularListAPIView(ListAPIView):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
                                                   reviews_count=Count('reviews')).order_by(
-            '-rating', '-reviews_count').distinct()[:4]
+            '-rating', '-reviews_count').distinct()[:8]
 
 
 class ProductsLimitedListAPIView(ListAPIView):
@@ -52,7 +53,7 @@ class ProductsLimitedListAPIView(ListAPIView):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
                                                   reviews_count=Count('reviews')).filter(
-            count__lte=LIMITED_COUNT_THRESHOLD, count__gt=0).distinct()[:4]
+            count__lte=LIMITED_COUNT_THRESHOLD, count__gt=0).distinct()[:16]
 
 
 class ProductBannersListAPIView(ListAPIView):
@@ -62,7 +63,7 @@ class ProductBannersListAPIView(ListAPIView):
     def get_queryset(self):
         return Product.objects.select_related('category').prefetch_related(
             'images', 'tags', 'reviews').annotate(rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
-                                                  reviews_count=Count('reviews')).distinct()[:4]
+                                                  reviews_count=Count('reviews')).distinct()[:3]
 
 
 class SaleListAPIView(ListAPIView):
@@ -125,20 +126,29 @@ class ProductCatalogListAPIView(ListAPIView):
         sort = filters_params.get('sort', default='datе')
         sort_type = filters_params.get('sortType', default='dec')
 
+        sort_mapping = {
+            'rating': 'rating',
+            'price': 'price',
+            'date': 'date',
+            'reviews': 'reviews_count',
+        }
+
+        sort_field = sort_mapping.get(sort, 'date')
+
         if sort_type == 'dec':
-            sort = f'-{sort}'
+            sort_field = f'-{sort_field}'
 
         return Product.objects.select_related(
             'category'
         ).prefetch_related(
-            'images', 'tags', 'reviews'
+            'images', 'tags'
         ).annotate(
             rating=Coalesce(Avg('reviews__rate'), Value(0.00)),
             reviews_count=Count('reviews')
         ).filter(
             **filters
         ).order_by(
-            sort
+            sort_field
         ).distinct()
 
 
@@ -154,6 +164,7 @@ class ProductRetrieveAPIView(RetrieveAPIView):
 
 class ProductReviewCreateAPIView(CreateAPIView):
     """Добавить отзыв на продукт"""
+    permission_classes = [IsAuthenticated]
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
