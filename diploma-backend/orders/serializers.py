@@ -142,7 +142,7 @@ class PaymentSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('The month must contain only numbers')
         if len(str(value)) != 2:
             raise serializers.ValidationError('The month must not be longer than 2 digits')
-        if 12 < int(value) < 1:
+        if 12 < int(value) or int(value) < 1:
             raise serializers.ValidationError('The month must be of 1 do 12 number')
         return value
 
