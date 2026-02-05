@@ -1,0 +1,307 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "category": 7,
+    "title": "iPhone 16 Pro Max",
+    "description": "Flagship smartphone from Apple",
+    "fullDescription": "",
+    "price": "120000.00",
+    "count": 10,
+    "freeDelivery": true,
+    "date": "2025-10-30T11:26:36.997Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "category": 12,
+    "title": "Nike Air Max 90",
+    "description": "Nike sneakers",
+    "fullDescription": "Подошва Air",
+    "price": "15000.00",
+    "count": 5,
+    "freeDelivery": false,
+    "date": "2025-10-31T07:36:24.438Z",
+    "is_deleted": false,
+    "tags": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "title": "Headphones JBL Tune T720BT",
+    "description": "Wireless headphones",
+    "fullDescription": "",
+    "price": "6000.00",
+    "count": 13,
+    "freeDelivery": false,
+    "date": "2025-10-31T07:50:24.559Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "category": 3,
+    "title": "Sony Alpha 7 IV",
+    "description": "Professional mirrorless camera",
+    "fullDescription": "Full-frame format, 33 MP, 4K video, stabilization",
+    "price": "148000.00",
+    "count": 5,
+    "freeDelivery": true,
+    "date": "2025-10-31T07:57:36.639Z",
+    "is_deleted": false,
+    "tags": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "category": 6,
+    "title": "Dress from the SS25 collection",
+    "description": "Author's dress with asymmetrical hem, limited edition",
+    "fullDescription": "",
+    "price": "18900.00",
+    "count": 0,
+    "freeDelivery": false,
+    "date": "2025-10-31T08:00:44.983Z",
+    "is_deleted": false,
+    "tags": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "category": 14,
+    "title": "Midi dress with floral print",
+    "description": "Light summer cotton dress with V-neck",
+    "fullDescription": "",
+    "price": "8500.00",
+    "count": 4,
+    "freeDelivery": true,
+    "date": "2025-10-31T08:24:57.373Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "category": 15,
+    "title": "Men's oversize shirt",
+    "description": "Classic white shirt of free cut made of thin fabric",
+    "fullDescription": "",
+    "price": "6200.00",
+    "count": 6,
+    "freeDelivery": false,
+    "date": "2025-10-31T08:26:58.919Z",
+    "is_deleted": false,
+    "tags": []
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "category": 6,
+    "title": "Oversize plaid coat",
+    "description": "The trend of the season is a large cage and a free cut",
+    "fullDescription": "",
+    "price": "16200.00",
+    "count": 3,
+    "freeDelivery": true,
+    "date": "2025-10-31T08:36:23.399Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      5
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "category": 16,
+    "title": "Sunglasses",
+    "description": "",
+    "fullDescription": "Designer glasses with gradient lenses, recycled plastic packaging",
+    "price": "7500.00",
+    "count": 4,
+    "freeDelivery": false,
+    "date": "2025-10-31T08:38:12.134Z",
+    "is_deleted": false,
+    "tags": [
+      5
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "category": 2,
+    "title": "Laptop backpack 15.6\"",
+    "description": "City backpack with shock absorption and USB port",
+    "fullDescription": "",
+    "price": "5500.00",
+    "count": 5,
+    "freeDelivery": true,
+    "date": "2025-10-31T09:21:48.863Z",
+    "is_deleted": false,
+    "tags": [
+      2,
+      3,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "category": 2,
+    "title": "Travel bag-trolley",
+    "description": "Light bag on wheels with a telescopic handle",
+    "fullDescription": "",
+    "price": "8900.00",
+    "count": 13,
+    "freeDelivery": false,
+    "date": "2025-10-31T09:23:03.577Z",
+    "is_deleted": false,
+    "tags": [
+      6
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "category": 5,
+    "title": "Power Bank 20,000 mAh",
+    "description": "",
+    "fullDescription": "Fast charging 22.5 W, 3 outputs, digital display",
+    "price": "3200.00",
+    "count": 11,
+    "freeDelivery": false,
+    "date": "2025-10-31T09:27:19.753Z",
+    "is_deleted": false,
+    "tags": [
+      2,
+      6
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "category": 5,
+    "title": "Smart watch with ECG",
+    "description": "Smart watch with heart monitoring, sleep, steps, notifications",
+    "fullDescription": "",
+    "price": "14900.00",
+    "count": 22,
+    "freeDelivery": true,
+    "date": "2025-10-31T09:32:42.239Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "title": "Case for AirPods with carabiner",
+    "description": "Silicone case with dust protection and backpack attachment",
+    "fullDescription": "",
+    "price": "1200.00",
+    "count": 17,
+    "freeDelivery": false,
+    "date": "2025-10-31T09:35:22.854Z",
+    "is_deleted": false,
+    "tags": [
+      2,
+      6
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "title": "USB-C cable 2 m (braided)",
+    "description": "Data transfer 10 Gbit/s, charging 100 W, 10,000+ bends",
+    "fullDescription": "",
+    "price": "950.00",
+    "count": 14,
+    "freeDelivery": false,
+    "date": "2025-10-31T09:43:02.797Z",
+    "is_deleted": false,
+    "tags": [
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "category": 1,
+    "title": "Mouse pad XXL",
+    "description": "Gel wrist support, waterproof surface",
+    "fullDescription": "",
+    "price": "1800.00",
+    "count": 6,
+    "freeDelivery": false,
+    "date": "2025-10-31T09:45:13.138Z",
+    "is_deleted": false,
+    "tags": [
+      1,
+      4
+    ]
+  }
+}
+]

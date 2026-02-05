@@ -1,0 +1,335 @@
+[
+{
+  "model": "products.specification",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "name": "Screen",
+    "value": "6.7 AMOLED"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "name": "Memory",
+    "value": "512 GB"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 3,
+  "fields": {
+    "product": 2,
+    "name": "Material",
+    "value": "Skin"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 4,
+  "fields": {
+    "product": 2,
+    "name": "Size",
+    "value": "42"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 5,
+  "fields": {
+    "product": 2,
+    "name": "Color",
+    "value": "Black"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 6,
+  "fields": {
+    "product": 3,
+    "name": "Color",
+    "value": "Purple"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 7,
+  "fields": {
+    "product": 3,
+    "name": "Wireless connection",
+    "value": "Bluetooth 5.3"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 8,
+  "fields": {
+    "product": 4,
+    "name": "Matrix",
+    "value": "33 MP"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 9,
+  "fields": {
+    "product": 4,
+    "name": "Video",
+    "value": "4K 60fps"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 10,
+  "fields": {
+    "product": 4,
+    "name": "Weight",
+    "value": "658 g"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 11,
+  "fields": {
+    "product": 5,
+    "name": "Color",
+    "value": "Red"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 12,
+  "fields": {
+    "product": 5,
+    "name": "Size",
+    "value": "42"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 13,
+  "fields": {
+    "product": 1,
+    "name": "Color",
+    "value": "Black"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 14,
+  "fields": {
+    "product": 6,
+    "name": "Material",
+    "value": "100% cotton"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 15,
+  "fields": {
+    "product": 6,
+    "name": "Size",
+    "value": "44"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 16,
+  "fields": {
+    "product": 7,
+    "name": "Material",
+    "value": "Cotton 98%, elastane 2%"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 17,
+  "fields": {
+    "product": 7,
+    "name": "Size",
+    "value": "46"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 18,
+  "fields": {
+    "product": 7,
+    "name": "Color",
+    "value": "White"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 19,
+  "fields": {
+    "product": 8,
+    "name": "Color",
+    "value": "Large cage, beige"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 20,
+  "fields": {
+    "product": 8,
+    "name": "Size",
+    "value": "44"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 21,
+  "fields": {
+    "product": 9,
+    "name": "Color",
+    "value": "Black"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 22,
+  "fields": {
+    "product": 10,
+    "name": "Color",
+    "value": "Gray"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 23,
+  "fields": {
+    "product": 12,
+    "name": "Digital display",
+    "value": "Yes"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 24,
+  "fields": {
+    "product": 12,
+    "name": "Charging",
+    "value": "22.5 W"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 25,
+  "fields": {
+    "product": 13,
+    "name": "Color",
+    "value": "Black"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 26,
+  "fields": {
+    "product": 14,
+    "name": "Compatibility",
+    "value": "AirPods Pro 2"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 27,
+  "fields": {
+    "product": 14,
+    "name": "Color",
+    "value": "Transparent"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 28,
+  "fields": {
+    "product": 13,
+    "name": "Compatibility",
+    "value": "iOS/Android"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 29,
+  "fields": {
+    "product": 13,
+    "name": "Battery",
+    "value": "7 days"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 30,
+  "fields": {
+    "product": 12,
+    "name": "Weight",
+    "value": "380 g"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 31,
+  "fields": {
+    "product": 12,
+    "name": "Color",
+    "value": "Black"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 32,
+  "fields": {
+    "product": 11,
+    "name": "Volume",
+    "value": "40 l"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 33,
+  "fields": {
+    "product": 11,
+    "name": "Weight",
+    "value": "1.2 kg"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 34,
+  "fields": {
+    "product": 15,
+    "name": "Color",
+    "value": "Purple"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 35,
+  "fields": {
+    "product": 16,
+    "name": "Size",
+    "value": "900×400 mm"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 36,
+  "fields": {
+    "product": 16,
+    "name": "Color",
+    "value": "Dark gray"
+  }
+},
+{
+  "model": "products.specification",
+  "pk": 37,
+  "fields": {
+    "product": 11,
+    "name": "Color",
+    "value": "Red"
+  }
+}
+]

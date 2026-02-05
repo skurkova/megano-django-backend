@@ -1,0 +1,266 @@
+[
+{
+  "model": "products.review",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "author": "Anna Beglova",
+    "email": "annet@example.com",
+    "text": "Great phone!",
+    "rate": 5,
+    "date": "2025-10-31T07:25:02.042Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "author": "Max Max",
+    "email": "maxmax@example.com",
+    "text": "I didn't like the quality of the photo:(",
+    "rate": 3,
+    "date": "2025-10-31T07:28:33.761Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 3,
+  "fields": {
+    "product": 2,
+    "author": "Petr Petrov",
+    "email": "petrov_petr@example.com",
+    "text": "I wore it for 2 months - everything is fine",
+    "rate": 4,
+    "date": "2025-10-31T07:40:54.177Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 4,
+  "fields": {
+    "product": 3,
+    "author": "Mari",
+    "email": "mari@rambler.ru",
+    "text": "Pure sound!",
+    "rate": 5,
+    "date": "2025-10-31T07:53:07.607Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 5,
+  "fields": {
+    "product": 5,
+    "author": "Kiara",
+    "email": "kiara@rambler.ru",
+    "text": "An insanely beautiful dress!",
+    "rate": 5,
+    "date": "2025-10-31T08:13:29.275Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 6,
+  "fields": {
+    "product": 6,
+    "author": "Mery K",
+    "email": "mery.k@gmail.com",
+    "text": "Class!",
+    "rate": 5,
+    "date": "2025-10-31T09:48:18.154Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 7,
+  "fields": {
+    "product": 1,
+    "author": "Anna Ivanova",
+    "email": "anna.ivanova@example.com",
+    "text": "The flagship is just a delight! Camera, screen, performance - everything is perfect.",
+    "rate": 5,
+    "date": "2025-10-31T10:30:31.411Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 8,
+  "fields": {
+    "product": 2,
+    "author": "Dmitry Petrov",
+    "email": "dmitry.petrov@example.com",
+    "text": "The shoes are great, comfortable, but the size is a little big. I recommend taking half a size smaller.",
+    "rate": 4,
+    "date": "2025-10-31T10:31:24.709Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 9,
+  "fields": {
+    "product": 3,
+    "author": "Ekaterina Smirnova",
+    "email": "katya.smirnova@example.com",
+    "text": "The sound is clear, the bass is deep. The battery lasts 20 hours - it's super! The only downside is that there is no noise reduction.",
+    "rate": 4,
+    "date": "2025-10-31T10:32:22.471Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 10,
+  "fields": {
+    "product": 4,
+    "author": "Mikhail Kozlov",
+    "email": "misha.kozlov@example.com",
+    "text": "Professional camera for a reasonable price. Focusing is lightning fast, 4K video is just cinematography. I recommend it to all video bloggers!",
+    "rate": 5,
+    "date": "2025-10-31T10:33:30.143Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 11,
+  "fields": {
+    "product": 6,
+    "author": "Tatiana Morozova",
+    "email": "tanya.morozova@example.com",
+    "text": "Light summer dress, fit the size. The color is bright, but fades after washing. For this price, it's good quality.",
+    "rate": 3,
+    "date": "2025-10-31T10:41:48.461Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 12,
+  "fields": {
+    "product": 7,
+    "author": "Igor Sokolov",
+    "email": "igor.sokolov@example.com",
+    "text": "A large shirt is perfect for my height. The material is soft, but it wrinkles quickly.",
+    "rate": 4,
+    "date": "2025-10-31T10:43:04.617Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 13,
+  "fields": {
+    "product": 8,
+    "author": "Svetlana Lebedeva",
+    "email": "sveta.lebedeva@example.com",
+    "text": "The trend of the season is true!",
+    "rate": 5,
+    "date": "2025-10-31T10:43:56.150Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 14,
+  "fields": {
+    "product": 9,
+    "author": "Alexey Gromov",
+    "email": "alex.g@example.com",
+    "text": "The glasses are stylish, but the lenses slightly distort peripheral vision. It's fine for everyday use.",
+    "rate": 3,
+    "date": "2025-10-31T10:44:56.374Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 15,
+  "fields": {
+    "product": 9,
+    "author": "Nikolai Romanov",
+    "email": "kolya.romanov@example.com",
+    "text": "The glasses are stylish!",
+    "rate": 5,
+    "date": "2025-10-31T10:45:53.982Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 16,
+  "fields": {
+    "product": 10,
+    "author": "Victoria Denisova",
+    "email": "vika.denisova@example.com",
+    "text": "The backpack is roomy, USB port works, but sometimes it glitches.",
+    "rate": 4,
+    "date": "2025-10-31T10:47:29.008Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 17,
+  "fields": {
+    "product": 10,
+    "author": "Alexey Gromov",
+    "email": "alex.gromov@example.com",
+    "text": "The laptop compartment with shock absorption - thank you!",
+    "rate": 5,
+    "date": "2025-10-31T10:48:06.821Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 18,
+  "fields": {
+    "product": 12,
+    "author": "Artem Kuznetsov",
+    "email": "artem.kuznetsov@example.com",
+    "text": "The battery is powerful, it charges the phone 5 times. Charging is fast, but the can itself warms up under load.",
+    "rate": 4,
+    "date": "2025-10-31T10:49:24.445Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 19,
+  "fields": {
+    "product": 12,
+    "author": "Elena Fedorova",
+    "email": "lena.fedorova@example.com",
+    "text": "In general, it's a great choice.",
+    "rate": 5,
+    "date": "2025-10-31T10:50:18.474Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 20,
+  "fields": {
+    "product": 13,
+    "author": "Elena Fedorova",
+    "email": "lena.fedorova@example.com",
+    "text": "The watch is super! Heart monitoring really helped - they found a slight arrhythmia. The battery lasts for 5 days. Very satisfied with the purchase.",
+    "rate": 5,
+    "date": "2025-10-31T10:51:04.907Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 21,
+  "fields": {
+    "product": 13,
+    "author": "Samira К",
+    "email": "samira.k@gmail.com",
+    "text": "Super!",
+    "rate": 5,
+    "date": "2025-11-07T12:07:08.313Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 22,
+  "fields": {
+    "product": 13,
+    "author": "Mark N",
+    "email": "mark.n@gmail.com",
+    "text": "There is no function to reply to a message(((",
+    "rate": 3,
+    "date": "2025-11-07T12:40:21.026Z"
+  }
+}
+]
