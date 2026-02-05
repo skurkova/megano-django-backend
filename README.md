@@ -15,7 +15,7 @@
 ![Структура проекта.png](Структура проекта.png)
 
 ## Процесс разворачивания проекта:
-1. Клонируйте репозиторий: `git clone https://gitlab.skillbox.ru/samira_kurkova/python_django_diploma`
+1. Клонируйте репозиторий: `git clone https://github.com/skurkova/megano-django-backend.git`
 2. Перейдите в папку с проектом: `cd diploma-backend`
 3. Создайте виртуальное окружение: `python -m venv venv`
 4. Активируйте виртуальное окружение: `source venv/bin/activate`
