@@ -1,7 +1,7 @@
 # Итоговый проект - интернет-магазин "Megano"
 
-Проект представляет собой подключаемое **django-приложение** интернет-магазина "Megano" и является полнофункциональным аналогом интернет-магазинов типа: holodilnik.ru, citilink.ru или ozon.ru. 
-Он реализован на **фреймворке Django** с помощью _Django REST Framework_. 
+Проект представляет собой **Django-приложение** (**backend**) интернет-магазина "Megano" и является полнофункциональным аналогом интернет-магазинов типа: holodilnik.ru, citilink.ru или ozon.ru. 
+Он реализован на **фреймворке Django** REST Framework. Интегрирован с предоставленным подключаемым **Django-приложение**м (**frontend**).
 
 ## Проект включает: 
 - создание REST API, 
@@ -15,7 +15,7 @@
 ![Структура проекта.png](Структура проекта.png)
 
 ## Процесс разворачивания проекта:
-1. Клонируйте репозиторий: `git clone https://gitlab.skillbox.ru/samira_kurkova/python_django_diploma`
+1. Клонируйте репозиторий: `git clone https://github.com/skurkova/megano-django-backend.git`
 2. Перейдите в папку с проектом: `cd diploma-backend`
 3. Создайте виртуальное окружение: `python -m venv venv`
 4. Активируйте виртуальное окружение: `source venv/bin/activate`
