@@ -18,43 +18,35 @@
 1. Клонируйте репозиторий: 
 
    `git clone https://github.com/skurkova/megano-django-backend.git`
-2. Перейдите в папку с проектом: 
    
    `cd megano-django-backend`
-3. Создайте и активируйте виртуальное окружение: 
+2. Создайте виртуальное окружение и установите зависимости: 
 
    `python3 -m venv venv`
 
    `source venv/bin/activate`
-4. Установите зависимости: 
 
    `python3 -m pip install -r requirements.txt`
-5. Настройте переменные окружения: 
+3. Настройте переменные окружения: 
    - переименуйте файл `.env.template` → `.env`
    - отредактируйте файл `.env`
-6. Подключите frontend:
-   - перейдите в папку frontend
+4. Соберите frontend-пакет:
      
      `cd diploma-frontend` 
-   - соберите пакет, выполнив команду 
      
      `python3 setup.py sdist`
-   - установите полученный пакет в виртуальное окружение
      
      `pip install dist/diploma-frontend-0.6.tar.gz`
-7. Перейдите в папку backend 
+5. Перейдите в backend и запустите: 
 
    `cd diploma-backend`
-8. Выполните миграции: 
 
    `python3 manage.py migrate`
-9. Загрузите фикстуры данных: 
 
    `python3 manage.py loaddata users categories product_images reviews sales specifications tags products`
-10. Запустите сервер:
 
     `python3 manage.py runserver 0.0.0.0:8000`
-11. Документация API доступна по адресу: 
+6. Документация API доступна по адресу: 
     http://127.0.0.1:8000/api/schema/swagger/
 
 ## Административная панель
