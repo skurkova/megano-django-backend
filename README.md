@@ -15,21 +15,51 @@
 ![Структура проекта.png](Структура проекта.png)
 
 ## Процесс разворачивания проекта:
-1. Клонируйте репозиторий: `git clone https://github.com/skurkova/megano-django-backend.git`
-2. Перейдите в папку с проектом: `cd diploma-backend`
-3. Создайте виртуальное окружение: `python -m venv venv`
-4. Активируйте виртуальное окружение: `source venv/bin/activate`
-5. Установите зависимости: `pip install -r requirements.txt`
-6. Настройте переменные окружения: 
+1. Клонируйте репозиторий: 
+
+   `git clone https://github.com/skurkova/megano-django-backend.git`
+2. Перейдите в папку с проектом: 
+   
+   `cd megano-django-backend`
+3. Создайте и активируйте виртуальное окружение: 
+
+   `python3 -m venv venv`
+
+   `source venv/bin/activate`
+4. Установите зависимости: 
+
+   `python3 -m pip install -r requirements.txt`
+5. Настройте переменные окружения: 
    - переименуйте файл `.env.template` → `.env`
    - отредактируйте файл `.env`
-7. Выполните миграции: `python manage.py migrate`
-8. Загрузите фикстуры данных: `python manage.py loaddata users categories product_images reviews sales specifications tags products`
-9. Запустите сервер: `python manage.py runserver 0.0.0.0:8000`
-10. Документация API доступна по адресу: `http://127.0.0.1:8000/api/schema/`
+6. Подключите frontend:
+   - перейдите в папку frontend
+     
+     `cd diploma-frontend` 
+   - соберите пакет, выполнив команду 
+     
+     `python3 setup.py sdist`
+   - установите полученный пакет в виртуальное окружение
+     
+     `pip install dist/diploma-frontend-0.6.tar.gz`
+7. Перейдите в папку backend 
+
+   `cd diploma-backend`
+8. Выполните миграции: 
+
+   `python3 manage.py migrate`
+9. Загрузите фикстуры данных: 
+
+   `python3 manage.py loaddata users categories product_images reviews sales specifications tags products`
+10. Запустите сервер:
+
+    `python3 manage.py runserver 0.0.0.0:8000`
+11. Документация API доступна по адресу: 
+    http://127.0.0.1:8000/api/schema/swagger/
 
 ## Административная панель
-Админка доступна по адресу: `http://127.0.0.1:8000/admin/`
+Админка доступна по адресу: 
+http://127.0.0.1:8000/admin/
 
 В ней можно:
 - Управлять пользователями
